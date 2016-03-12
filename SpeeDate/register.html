@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="RegisterMod">
+ 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SpeeDate</title>     
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+    <script type="text/javascript" src="register.js"></script>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+ 
+<body ng-controller="RegisterCtrl">
+ 
+    <div class="container">
+        <div class="jumbotron" style="padding-bottom:0px;">
+            <h2>New Account!</h2>
+        </div>
+        <form class="form-signin" role="form">
+            <input type="email" ng-model="email" class="form-control" placeholder="Email address" required="" autofocus="">
+            <input type="password" ng-model="password" class="form-control" placeholder="Password" required="">
+            <label class="checkbox">
+                <a href="SpeeDate.html"> Sign In</a>
+        </label>
+        <button type="button" class="btn btn-lg btn-primary btn-block" ng-click="createUser()">Register</button>
+      </form>
+        <p ng-if="message">Message: <strong>{{ message }}</strong></p>
+        <p ng-if="error">Error: <strong>{{ error }}</strong></p>
+    </div>
+ 
+</body></html>
